@@ -19,8 +19,8 @@ def pangea_scrape(target, landing_zone=os.path.join('static', 'data')):
     Returns:
         None
     """
-    with open(target) as oid:
-        for line in oid:
+    with open(target) as open_download_list:
+        for line in open_download_list:
             items = [x.strip() for x in line.split('\t')]
             if re.match('^\d{4}-.+', items[0]):  # if download list line starts with a date
                 link = items[-1]
