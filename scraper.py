@@ -19,13 +19,14 @@ def pangea_scrape(target, landing_zone=os.path.join('static', 'data')):
     Returns:
         None
     """
-    with open(target) as fid:
-        for line in fid:
+    with open(target) as oid:
+        for line in oid:
             items = [x.strip() for x in line.split('\t')]
             if re.match('^\d{4}-.+', items[0]):
                 link = items[-1]
                 download = requests.get(link)
-                download_path = os.path.join(landing_zone, os.path.basename(link))
+                download_path = os.path.join(landing_zone,
+                                             os.path.basename(link))
                 with open(download_path, 'w') as fid:
                     print(link, download.status_code)
                     fid.write(download.content)
