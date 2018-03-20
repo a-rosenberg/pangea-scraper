@@ -1,5 +1,5 @@
 # Pangea file scraper
-To grab German bathymetric data for NCEI archiving.
+To grab bathymetric data for NCEI archiving.
 
 Will not work with data under a moratorium
 
