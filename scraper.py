@@ -8,7 +8,7 @@ import os
 
 
 def pangea_scrape(target, landing_zone=os.path.join('static', 'data')):
-    """Main function to download files from Pangea generated list to landing
+    """Main function to get files from Pangea generated download list to landing
     zone.
 
     Args:
